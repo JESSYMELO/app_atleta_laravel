@@ -21,4 +21,17 @@ Route::get('/cadastro/pesquisar', function () {
    return view('cadastro.pesquisar');
 });
 
-Route::get('/atleta/pesquisar','AtletaController@pesquisar');
+
+Route::get('/cadastro/pesquisar','AtletaController@pesquisar');
+
+Route::post('/cadastro/pesquisar', 'AtletaController@pesquisar');
+
+Route::get('/cadastro/inserir', 'AtletaController@mostrar_inserir');
+
+Route::post('/cadastro/inserir', 'AtletaController@inserir');
+
+Route::get('/cadastro/alterar/{id}', 'AtletaController@mostrar_alterar');
+
+Route::post('/cadastro/alterar', 'AtletaController@alterar');
+
+Route::get('/cadastro/excluir/{id}', 'AtletaController@excluir');
