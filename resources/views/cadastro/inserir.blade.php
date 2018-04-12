@@ -18,7 +18,7 @@
         <div class="alert alert-success">Atleta inserido com sucesso!</div>
     @endif
 
-    <form action="/atletas/inserir" method="post" class="mt-2">
+    <form action="/cadastro/inserir" method="post" class="mt-2">
         <input type="hidden" name="_token" value="{{{csrf_token()}}}">
         <div class="form-group">
             <label for="nome">Nome: <span class="text-danger">*</span></label>
@@ -34,7 +34,7 @@
         </div>
         <div class="form-group">
             <label for="posicao">Posição</label>
-            <input type="nome" id="posicao" name="posicao" class="form-control">
+            <input type="text" id="posicao" name="posicao" class="form-control">
         </div>
         <div>Os campos marcados com<span class="text-danger">*</span>não podem estar em branco</div>
         <input type="submit" class="btn btn-success mt-2" value="Inserir">
