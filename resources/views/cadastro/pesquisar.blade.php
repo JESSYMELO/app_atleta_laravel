@@ -11,7 +11,6 @@
     <title>Pesquisar atleta</title>
 </head>
 <body>
-
 <div class="container">
     <h1 class="mt-2">Pesquisa de Atletas</h1>
 
@@ -23,8 +22,6 @@
     @if(count($atletas)==0)
         <div class="alert alert-danger mt-2">Nenhum Atleta encontrado!</div>
     @else
-
-
 
 
         <form action="/cadastro/pesquisar" method="post" class="form-inline mt-2">

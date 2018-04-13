@@ -42,7 +42,7 @@ class AtletaController extends Controller
         // Criado uma mensagem para o usuário
         $mensagem = "Atleta inserido com sucesso";
 
-        // Chamando a view produto.inserir e enviando a mensagem criada
+        // Chamando a view cadastro.inserir e enviando a mensagem criada
         return view('cadastro.inserir')->with('mensagem', $mensagem);
     }
     public function mostrar_alterar($id){
@@ -50,7 +50,7 @@ class AtletaController extends Controller
         //busca no banco o registro com o id recebido
         $atletas = Atleta::find($id);
 
-        //envia os dados deste registro a view produto.alterar
+        //envia os dados deste registro a view casdastro.alterar
         return view('cadastro.alterar')->with('atletas',$atletas);
     }
 

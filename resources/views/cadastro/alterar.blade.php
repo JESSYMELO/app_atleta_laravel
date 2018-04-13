@@ -1,7 +1,7 @@
 <?php $titulo="alterar";?>
 @extends('principal')
 @section('conteudo')
-        <!doctype html>
+<!doctype html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,7 @@
     <title>Document</title>
 </head>
 <body>
+
 <div class="container">
     <h1 class="mt-2">Alterar atleta</h1>
     <form action="/cadastro/alterar" method="post" class="mt-2">

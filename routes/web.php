@@ -22,16 +22,25 @@ Route::get('/cadastro/pesquisar', function () {
 });
 
 
-Route::get('/cadastro/pesquisar','AtletaController@pesquisar');
+Route::get('/cadastro/pesquisar','AtletaController@pesquisar')->middleware('auth');
 
-Route::post('/cadastro/pesquisar', 'AtletaController@pesquisar');
+Route::post('/cadastro/pesquisar', 'AtletaController@pesquisar')->middleware('auth');
 
-Route::get('/cadastro/inserir', 'AtletaController@mostrar_inserir');
+Route::get('/cadastro/inserir', 'AtletaController@mostrar_inserir')->middleware('auth');
 
-Route::post('/cadastro/inserir', 'AtletaController@inserir');
+Route::post('/cadastro/inserir', 'AtletaController@inserir')->middleware('auth');
 
-Route::get('/cadastro/alterar/{id}', 'AtletaController@mostrar_alterar');
+Route::get('/cadastro/alterar/{id}', 'AtletaController@mostrar_alterar')->middleware('auth');
 
-Route::post('/cadastro/alterar', 'AtletaController@alterar');
+Route::post('/cadastro/alterar', 'AtletaController@alterar')->middleware('auth');
 
-Route::get('/cadastro/excluir/{id}', 'AtletaController@excluir');
+
+Route::get('/cadastro/excluir/{id}', 'AtletaController@excluir')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
